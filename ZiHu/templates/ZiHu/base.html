@@ -1,0 +1,76 @@
+{% load static %}
+{##}
+<!DOCTYPE html>
+<html lang="en">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/dist/css/bootstrap.css' %}">
+    <script src={% static "bootstrap/dist/js/bootstrap.min.js" %}></script>
+   <link rel="stylesheet" type="text/css" href="{% static 'ZiHu/css/myMain.css' %}">
+   <script src="https://kit.fontawesome.com/c43c468dc4.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+
+{#        <link id="highlight-css" rel="stylesheet" href="{% static 'ZiHu/css/highlight-dark.css' %}" />#}
+{#        <link id="highlight-css-dark" rel="stylesheet" href="{% static 'ZiHu/css/highlight-dark.css' %}" />#}
+{% block head %}
+    <head>
+        <meta charset="UTF-8">
+        <title>盐神搬运工</title>
+
+    </head>
+{% endblock %}
+
+{% block body %}
+    {% include 'ZiHu/narBar.html' %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script>
+
+      $(document).ready(function(){
+      // Add click event to collapsed icon
+      $(document).on('click', '.navbar-toggler', function(){
+        // Toggle the active class on the collapsed icon
+        $('.navbar-toggler').toggleClass('active');
+        // Toggle the visibility of the dropdown menu
+        $('.navbar-collapse').toggleClass('show');
+      });
+
+      // Add hover event to collapsed icon
+      $(document).on('mouseenter', '.navbar-toggler', function(){
+        // Add the hover class to the collapsed icon
+        $('.navbar-toggler').addClass('hover');
+      });
+      $(document).on('mouseleave', '.navbar-toggler', function(){
+        // Remove the hover class from the collapsed icon
+        $('.navbar-toggler').removeClass('hover');
+      });
+    });
+
+
+    {#    $('.navbar-toggler').click(function() {#}
+    {#  $(this).toggleClass('active');#}
+    {#  var target = $($(this).data('target'));#}
+    {#  target.toggleClass('show');#}
+    {#  if (target.hasClass('show')) {#}
+    {#    $('body').addClass('modal-open');#}
+    {#  } else {#}
+    {#    $('body').removeClass('modal-open');#}
+    {#  }#}
+    {#});#}
+    {##}
+    {#    $('.navbar-toggler').hover(function() {#}
+    {#      $(this).addClass('hover');#}
+    {#    }, function() {#}
+    {#      $(this).removeClass('hover');#}
+    {#    });#}
+    </script>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+<script  src ="{% static "ZiHu/js/myColorTheme.js" %}"></script>
+</html>
+
+
+

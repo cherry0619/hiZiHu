@@ -1,0 +1,48 @@
+.navbar {
+  font-size: 18px;
+}
+
+.navbar-nav li {
+  margin-right: 1rem;
+}
+
+.navbar-nav li:first-child {
+  margin-left: 6rem;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.nav-link {
+  color: #333;
+}
+
+
+.dropdown-menu {
+  background-color: #f8f9fa;
+  border: none;
+}
+
+.dropdown-item {
+  color: #333;
+}
+
+.btn-no-border {
+  border: none !important;
+}
+
+
+
+@media (max-width: 499px) {
+  .navbar-collapse {
+    display: none;
+  }
+}
+
+
+.dark-mode {
+  background-color: #222222;
+  color: #ffffff;
+}
